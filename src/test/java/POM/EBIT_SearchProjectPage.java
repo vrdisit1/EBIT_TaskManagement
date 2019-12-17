@@ -51,7 +51,7 @@ public class EBIT_SearchProjectPage {
 	}
 	
 	public void getProjectDetails(String ProjectName) throws InterruptedException {
-		Thread.sleep(15000);
+		Thread.sleep(5000);
 		util.textElement(dr, txt_projectname, ProjectName);
 		util.buttonElement(dr, btn_Search);
 		//dr.findElement(txt_projectname).sendKeys(Keys.ENTER);

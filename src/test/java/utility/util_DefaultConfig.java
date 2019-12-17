@@ -1,11 +1,12 @@
 package utility;
 
+import java.text.SimpleDateFormat;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class util_DefaultConfig {
@@ -49,6 +50,28 @@ public class util_DefaultConfig {
 		// TODO Auto-generated method stub
 		WaitForElement(dr, by);
 		dr.findElement(by).click();
+		
+	}
+	
+	public void dropdownElement(WebDriver dr, By by, String dropdownValues) {
+		WaitForElement(dr, by);
+		Select dropDownValue = new Select(dr.findElement(by));
+		dropDownValue.selectByVisibleText(dropdownValues);
+		
+	}
+	
+	
+	public void calanederClickForOpen(WebDriver dr, By by,String DateFormat) {
+		// TODO Auto-generated method stub
+		WaitForElement(dr, by);
+		dr.findElement(by).click();	
+		
+		SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MMM-yyyy");
+		String date = DATE_FORMAT.format(0);
+		String month = DATE_FORMAT.format(1);
+		
+		System.out.println(date);
+		System.out.println(month);
 		
 	}
 

@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import POM.EBIT_LoginPage;
 import POM.EBIT_ProjectPlanning;
+import POM.EBIT_ProjectSchedulingPage;
 import POM.EBIT_SearchProjectPage;
 import utility.util_DefaultConfig;
 
@@ -43,6 +44,10 @@ public class EBIT_TaskManagement {
 			plan.getPlanning();
 			plan.setCreateEditPlan();
 			
+		EBIT_ProjectSchedulingPage addtask = new EBIT_ProjectSchedulingPage(dr);
+		
+			addtask.getAddTask();
+			addtask.setTaskDetails();
 			
 			
 			
